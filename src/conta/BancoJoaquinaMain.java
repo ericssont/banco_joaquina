@@ -11,7 +11,7 @@ public class BancoJoaquinaMain {
 			int opcaoSelecionada = scanner.nextInt();
 
 			switch (opcaoSelecionada) {
-			case 1:
+			case 1://teste
 				Pessoa pessoa = new Pessoa();
 				/*
 				 * Pessoa: Nome,cpf,endereco,data de nascimento
