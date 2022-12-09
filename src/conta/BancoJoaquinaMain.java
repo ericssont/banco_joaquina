@@ -1,10 +1,14 @@
 package conta;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BancoJoaquinaMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		List<Conta> contas = new ArrayList<>();
+		
 		while (true) {
 			System.out.println(
 					"---- Bem Vindo(a) ao Banco Joaquina ---- \nDigite: \n\n1 - Abrir conta \n2 - Depósito \n3 - Saque \n4 - Transferência \n5 - Consultar saldo \n6 - Encerrar");
@@ -13,12 +17,13 @@ public class BancoJoaquinaMain {
 			switch (opcaoSelecionada) {
 			case 1:
 				Conta conta = new Conta();
-				System.out.println(conta.toString());
-				/*
-				 * Pessoa: Nome,cpf,endereco,data de nascimento
-				 * Conta: numero da conta,agencia,saldo, (Pessoa) titular
-				 */
-				System.out.println("Abrir conta selecionado");
+				if(contas.isEmpty()) {
+					conta.setNumeroConta("1");
+				} else {
+					Integer numeroConta = contas.size() + 1;
+					conta.setNumeroConta(numeroConta.toString());
+				}
+				contas.add(conta);
 				break;
 			case 2:
 				System.out.println("Depósito selecionado");

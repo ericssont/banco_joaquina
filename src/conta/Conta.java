@@ -1,7 +1,6 @@
 package conta;
 
 public class Conta {
-	//Conta: numero da conta,agencia,saldo, (Pessoa) titular
 	private String numeroConta;
 	private String agencia;
 	private Double saldo;
