@@ -11,8 +11,9 @@ public class BancoJoaquinaMain {
 			int opcaoSelecionada = scanner.nextInt();
 
 			switch (opcaoSelecionada) {
-			case 1://teste
-				Pessoa pessoa = new Pessoa();
+			case 1:
+				Conta conta = new Conta();
+				System.out.println(conta.toString());
 				/*
 				 * Pessoa: Nome,cpf,endereco,data de nascimento
 				 * Conta: numero da conta,agencia,saldo, (Pessoa) titular
