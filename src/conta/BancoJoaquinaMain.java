@@ -35,7 +35,7 @@ public class BancoJoaquinaMain {
 				System.out.println("Obrigado pela preferência!");
 				System.exit(0);
 				break;
-			default:
+			default://teste
 				System.out.println("Opção inválida");
 				break;
 			}
