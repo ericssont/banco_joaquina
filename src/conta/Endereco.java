@@ -14,7 +14,7 @@ public class Endereco {
 	public Endereco() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Informe seu cep:");
-		this.cep = scanner.next();
+		this.cep = scanner.nextLine();
 		System.out.println("Informe seu logradouro:");
 		this.logradouro = scanner.nextLine();
 		System.out.println("Informe seu bairro:");
@@ -24,10 +24,9 @@ public class Endereco {
 		System.out.println("Informe seu estado:");
 		this.estado = scanner.nextLine();
 		System.out.println("Informe o tipo da sua residência:");
-		this.tipo = scanner.next();
+		this.tipo = scanner.nextLine();
 		System.out.println("Informe o número da sua residência:");
 		this.numero = scanner.nextInt();
-		scanner.close();
 	}
 
 	public String getCep() {
@@ -84,5 +83,11 @@ public class Endereco {
 
 	public void setNumero(Integer numero) {
 		this.numero = numero;
+	}
+
+	@Override
+	public String toString() {
+		return "Endereco [cep=" + cep + ", logradouro=" + logradouro + ", bairro=" + bairro + ", cidade=" + cidade
+				+ ", estado=" + estado + ", tipo=" + tipo + ", numero=" + numero + "]";
 	}
 }

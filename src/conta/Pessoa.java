@@ -1,6 +1,7 @@
 package conta;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Pessoa {
@@ -14,11 +15,10 @@ public class Pessoa {
 		System.out.println("Infome seu nome: ");
 		this.nome = scanner.nextLine();
 		System.out.println("Infome seu cpf: ");
-		this.cpf = scanner.next();
+		this.cpf = scanner.nextLine();
 		System.out.println("Infome sua data de nascimento: ");
-		//this.dataNascimento = scanner.();
+		this.dataNascimento = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyy"));
 		this.endereco = new Endereco();
-		scanner.close();
 	}
 
 	public String getNome() {
@@ -51,5 +51,11 @@ public class Pessoa {
 
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", endereco=" + endereco + ", dataNascimento=" + dataNascimento
+				+ "]";
 	}
 }
