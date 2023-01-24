@@ -8,7 +8,7 @@ public class BancoJoaquinaMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		List<Conta> contas = new ArrayList<>();
-		
+		//teste
 		while (true) {
 			System.out.println(
 					"---- Bem Vindo(a) ao Banco Joaquina ---- \nDigite: \n\n1 - Abrir conta \n2 - Depósito \n3 - Saque \n4 - Transferência \n5 - Consultar saldo \n6 - Encerrar");
