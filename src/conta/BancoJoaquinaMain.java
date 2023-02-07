@@ -27,6 +27,23 @@ public class BancoJoaquinaMain {
 				break;
 			case 2:
 				System.out.println("Depósito selecionado");
+				System.out.println("Informe a conta para depósito: ");
+				String numeroConta = scanner.next();
+				contaUsuario.setNumeroConta(numeroConta);
+				
+				for (Conta contaUsuario1 : contas) {
+					if (contaUsuario1.getNumeroConta().equals(numeroConta)) {
+				    	System.out.print("Informe o valor do Depósito: ");
+				        double valorDeposito = scanner.nextDouble();
+				        contaUsuario1.setSaldo((contaUsuario1.getSaldo() + valorDeposito));
+					
+						
+						System.out.println("Valor atual da conta: " + contaUsuario1.getSaldo());
+				} else {
+					System.out.println("O número dessa conta não é válido.");
+				}
+				}
+				
 				break;
 			case 3:
 				System.out.println("Saque selecionado");
